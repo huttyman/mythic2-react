@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 
-const RandomSection = ({ title, buttonText, detailText, itemList }) => {
-  const [result, setResult] = useState([]);
-  const [detailVisible, setDetailVisible] = useState(false);
+const RandomSection = ({ title, buttonText, detailText, itemList,setDetail,setResult,setDetailVisible }) => {
+  // const [result, setResult] = useState([]);
+  // const [detailVisible, setDetailVisible] = useState(false);
 
   const handleButtonClick = () => {
     const randomItems = getRandomItems();
     setResult(randomItems);
+    setDetail(detailText);
     setDetailVisible(true);
   };
 
@@ -30,19 +31,6 @@ const RandomSection = ({ title, buttonText, detailText, itemList }) => {
       >
         {buttonText}
       </button>
-      {result.length > 0 && (
-        <div className="mt-4">
-          <h3 className="text-xl font-bold">Result:</h3>
-          <p>{result[0]}</p>
-          <p>{result[1]}</p>
-        </div>
-      )}
-      {detailVisible && (
-        <div className="mt-4">
-          <h3 className="text-xl font-bold">Detail:</h3>
-          <p>{detailText}</p>
-        </div>
-      )}
     </div>
   );
 };
