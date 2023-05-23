@@ -5,6 +5,7 @@ import './App.css';
 import { useState } from 'react';
 
 import { Probability } from './utils/Probability';
+import ElementsTable from './ElementsTable';
 
 function App() {
 
@@ -89,6 +90,8 @@ function App() {
         </div>
         {result && <div className="text-lg font-semibold">{result}</div>}
       </div>
+
+      <ElementsTable/>
     </div>
   );
 }
