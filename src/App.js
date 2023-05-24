@@ -8,6 +8,7 @@ import { Probability } from './utils/Probability';
 import ElementsTable from './ElementsTable';
 import MeaningTable from './MeaningTable';
 import AdventureList from './AdventureList';
+import ExpectedScene from './ExpectedScene';
 
 function App() {
 
@@ -83,6 +84,7 @@ function App() {
         }
       </div>
       <MeaningTable/>
+      <ExpectedScene chaosFactor={chaosFactor}/>
       <AdventureList/>
       <ElementsTable/>
     </div>
