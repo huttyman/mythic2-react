@@ -50,23 +50,48 @@ import {
     {
       buttonText: "Adventure Tone",
       detailText:
-        "If you’re constructing an adventure in advance and want some help from Mythic, you can use the Adventure Tone Elements Table to guide you. You’re constructing a fantasy adventure and want to determine the overall tone. A few rolls on the Adventure Tone Elements Table give us the selected tones. You may interpret this to mean...",
+        `If you’re constructing an adventure in advance
+        and want some help from Mythic you can use the
+        Adventure Tone Elements Table to guide you.
+        You’re constructing a fantasy adventure and
+        want to determine the overall tone. A few rolls
+        on the Adventure Tone Elements Table give us
+        “Bizarre” and “Reassuring”. You may interpret
+        this to mean that this is a high-magic adventure
+        world with lots of fantastical creatures and
+        spell-craft as a part of everyday life. Despite these
+        extraordinary elements, the adventure world is
+        a stable one for your Character who fits right in
+        with all the strangeness.
+        The Plot Twists Elements Table can be used
+        to modify your results from the Adventure Tone
+        Table or as your Meaning Table for a Random
+        Event that you think will change the course of
+        your narrative.`,
       itemList: adventureTone
     },
     {
       buttonText: "Alien Species Descriptors",
       detailText:
-        "This is meant for sci-fi adventures that feature aliens on distant worlds. The table is biased toward intelligent species, the kind found in a functioning civilization.",
+       `This is meant for sci-fi adventures that feature
+       aliens on distant worlds. The table is biased
+       toward intelligent species, the kind found in a
+       functioning civilization.`,
       itemList: alienDescriptor
     },
     {
       buttonText: "Animal Actions",
-      detailText: "Description for Animal Actions",
+      detailText: `This table focuses on actions a wild animal
+      might take. This is useful for describing the
+      behavior of animals or any other creature that’s
+      feral, out of its mind, or extremely confused.`,
       itemList: animalActions
     },
     {
       buttonText: "Army Descriptors",
-      detailText: "Description for Army Descriptors",
+      detailText: `This table will give you the characteristics of
+      an army. It’s applicable to any large military force,
+      independent of genre.`,
       itemList: armyDescriptors
     },
     {
@@ -76,7 +101,9 @@ import {
     },
     {
       buttonText: "Characters",
-      detailText: "Description for Characters",
+      detailText: ` the most
+      generic of the Characters Elements Tables,
+      meant to cover anything Character-related.`,
       itemList: characters
     },
     {
@@ -226,7 +253,24 @@ import {
     },
     {
       buttonText: "Plot Twists",
-      detailText: "Description for Plot Twists",
+      detailText: `If you’re constructing an adventure in advance
+      and want some help from Mythic you can use the
+      Adventure Tone Elements Table to guide you.
+      You’re constructing a fantasy adventure and
+      want to determine the overall tone. A few rolls
+      on the Adventure Tone Elements Table give us
+      “Bizarre” and “Reassuring”. You may interpret
+      this to mean that this is a high-magic adventure
+      world with lots of fantastical creatures and
+      spell-craft as a part of everyday life. Despite these
+      extraordinary elements, the adventure world is
+      a stable one for your Character who fits right in
+      with all the strangeness.
+      The Plot Twists Elements Table can be used
+      to modify your results from the Adventure Tone
+      Table or as your Meaning Table for a Random
+      Event that you think will change the course of
+      your narrative.`,
       itemList: plotTwists
     },
     {
