@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { useState } from 'react';
+import { useState, React} from 'react';
 
 import { Probability } from './utils/Probability';
 import ElementsTable from './ElementsTable';
@@ -18,13 +18,11 @@ function App() {
 
     const isDoubleDigit = roll % 11 === 0 && roll !== 0;
     const digit = roll%10
-    console.log('isDoubleDigit', isDoubleDigit)
-    console.log('digit', digit)
+    
     let randomEvent = '';
 
     if (isDoubleDigit && digit <= chaosFactor) {
-      console.log('getRandome Event')
-      randomEvent = ` \n(Random Event: ${getRandomEvent()})`;
+      randomEvent = ` \nRandom Event: ${getRandomEvent()}`;
     }
 
     if (roll < exn) {
@@ -41,21 +39,6 @@ function App() {
   console.log('test', Probability.impossible[1].exy);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-
       <div className="container mx-auto p-4">
         <div className="mb-4">
           <label
@@ -88,7 +71,14 @@ function App() {
             </button>
           ))}
         </div>
-        {result && <div className="text-lg font-semibold">{result}</div>}
+        {result && 
+        <div className="text-lg font-semibold">{result.split('\n').map((line, index) => (
+          <div key={index}>
+            {line}
+            <br />
+          </div>
+        ))}</div>
+        }
       </div>
 
       <ElementsTable/>
