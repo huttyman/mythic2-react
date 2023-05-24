@@ -15,7 +15,7 @@ const ElementsTable = () => {
       <h2 className="text-2xl font-bold mb-4">ELEMENTS MEANING TABLES AT A GLANCE</h2>
       {/* Add the table contents here */}
 
-        <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex flex-wrap justify-center space-x-5">
             {sections.map((section, index) => (
                 <RandomSection
                     key={index}
