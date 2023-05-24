@@ -7,6 +7,7 @@ import { useState, React} from 'react';
 import { Probability } from './utils/Probability';
 import ElementsTable from './ElementsTable';
 import MeaningTable from './MeaningTable';
+import AdventureList from './AdventureList';
 
 function App() {
 
@@ -82,6 +83,7 @@ function App() {
         }
       </div>
       <MeaningTable/>
+      <AdventureList/>
       <ElementsTable/>
     </div>
   );
