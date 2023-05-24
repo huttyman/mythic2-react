@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
-const RandomSection = ({ buttonText, setTopic, detailText, itemList,setDetail,setResult,setDetailVisible }) => {
+const MeaningSection = ({ buttonText, setTopic, itemList1, itemList2, setResult,setDetailVisible }) => {
   // const [result, setResult] = useState([]);
   // const [detailVisible, setDetailVisible] = useState(false);
 
   const handleButtonClick = () => {
     const randomItems = getRandomItems();
     setResult(randomItems);
-    setDetail(detailText);
     setDetailVisible(true);
     setTopic(buttonText);
   };
@@ -15,12 +14,12 @@ const RandomSection = ({ buttonText, setTopic, detailText, itemList,setDetail,se
   const getRandomItems = () => {
     const randomIndexes = [];
     while (randomIndexes.length < 2) {
-      const randomIndex = Math.floor(Math.random() * itemList.length);
+      const randomIndex = Math.floor(Math.random() * itemList1.length);
       if (!randomIndexes.includes(randomIndex)) {
         randomIndexes.push(randomIndex);
       }
     }
-    return [itemList[randomIndexes[0]], itemList[randomIndexes[1]]];
+    return [itemList1[randomIndexes[0]], itemList2[randomIndexes[1]]];
   };
 
   return (
@@ -35,4 +34,4 @@ const RandomSection = ({ buttonText, setTopic, detailText, itemList,setDetail,se
   );
 };
 
-export default RandomSection;
+export default MeaningSection;

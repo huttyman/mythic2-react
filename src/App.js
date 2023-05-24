@@ -6,6 +6,7 @@ import { useState, React} from 'react';
 
 import { Probability } from './utils/Probability';
 import ElementsTable from './ElementsTable';
+import MeaningTable from './MeaningTable';
 
 function App() {
 
@@ -80,7 +81,7 @@ function App() {
         ))}</div>
         }
       </div>
-
+      <MeaningTable/>
       <ElementsTable/>
     </div>
   );
@@ -93,7 +94,18 @@ const getRandomEvent = () => {
   const events = [
     { min: 1, max: 5, name: 'Remote Event', detail: "A Remote Event means that something has happened that your Character wasn’t present for; they’re only learning about it now. This can happen in many ways. \nMaybe the Player Character encounters the dead body of an NPC they met earlier in the adventure, and the Remote Event is this Character’s death, which the PC did not directly witness. Or maybe the PC wanders into a tavern and learns by word of mouth that the enemy horde has advanced, destroying the next town down the road.\nRemote Events are a way of introducing new twists into an adventure without the PC being directly involved with them." },
     { min: 6, max: 10, name: 'Ambiguous Event', detail: 'An event with unclear consequences happens.' },
-    { min: 11, max: 20, name: 'New NPC', detail: 'A new non-player character is introduced.' },
+    { min: 11, max: 20, name: 'New NPC', detail: `A new Non-Player Character enters the 
+    adventure. This new Character plays a role in 
+    the current Scene and will likely be added to the 
+    Characters List when the Scene is over. \n\n
+    The PC in a sword-and-sorcery fantasy game 
+    is exploring a dungeon. In a Scene where she’s 
+    checking out a room, the Player gets a Random 
+    Event with a New NPC, which they determine 
+    to be a giant mutated rat. After a short battle, 
+    the Player realizes that there are likely more of 
+    these rats in the dungeon, so they add “Giant 
+    mutant rats” to the Characters Li` },
     { min: 21, max: 40, name: 'NPC Action', detail: 'An NPC takes an action that affects the story.' },
     { min: 41, max: 45, name: 'NPC Negative', detail: 'An NPC experiences a negative event.' },
     { min: 46, max: 50, name: 'NPC Positive', detail: 'An NPC experiences a positive event.' },
