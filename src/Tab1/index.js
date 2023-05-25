@@ -7,6 +7,7 @@ import AdventureList from './AdventureList/AdventureList';
 import ExpectedScene from './ExpectedScene';
 import ChaosFactor from './ChaosFactor';
 import Note from './Note';
+import ClearLocalStorageButton from './ClearLocalStorageButton';
 
 
 const Tab1 = () => {
@@ -24,6 +25,7 @@ const Tab1 = () => {
       <Note/>
       <AdventureList/>
       <ElementsTable/>
+      <ClearLocalStorageButton/>
     </div>
   );
 }
