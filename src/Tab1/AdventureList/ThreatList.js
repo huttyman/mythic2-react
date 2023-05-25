@@ -42,7 +42,7 @@ const ThreatList = () => {
               type="text"
               value={input}
               onChange={e => handleInputChange(index, e.target.value)}
-              className="border border-black"
+              className="border border-black rounded px-2 py-1 mt-2 w-96"
             />
           </li>
         ))}
