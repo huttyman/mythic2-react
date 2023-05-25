@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const CharacterList = () => {
-  const [inputs, setInputs] = useState(Array(15).fill(''));
+  const [inputs, setInputs] = useState(() => {
+    const savedInputs = localStorage.getItem('characterListInputs');
+    return savedInputs ? JSON.parse(savedInputs) : Array(15).fill('');
+  });
   const [selectedInput, setSelectedInput] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('characterListInputs', JSON.stringify(inputs));
+  }, [inputs]);
 
   const handleButtonClick = () => {
     // Filter non-empty inputs
@@ -24,7 +31,9 @@ const CharacterList = () => {
     <div>
       <h2>CHARACTER LIST</h2>
 
-      <button  className="bg-green-500 text-white px-2 py-1 rounded text-sm" onClick={handleButtonClick}>Select Character</button>
+      <button className="bg-green-500 text-white px-2 py-1 rounded text-sm" onClick={handleButtonClick}>
+        Select Character
+      </button>
 
       <ul>
         {inputs.map((input, index) => (

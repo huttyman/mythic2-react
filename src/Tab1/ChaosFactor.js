@@ -1,13 +1,24 @@
 import React from 'react';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Probability } from '../utils/Probability';
 
   
 const ChaosFactor = ({setMainChaosFactor}) => {
+  const [chaosFactor, setChaosFactor] = useState(() => {
+    const savedChaosFactor = localStorage.getItem('chaosFactor');
+    return savedChaosFactor ? parseInt(savedChaosFactor) : 5;
+  });
 
-  const [chaosFactor, setChaosFactor] = useState(5);
   const [result, setResult] = useState('');
+
+  useEffect(() => {
+    localStorage.setItem('chaosFactor', chaosFactor.toString());
+  }, [chaosFactor]);
+
+  useEffect(() => {
+    setMainChaosFactor(chaosFactor)
+  }, []);
 
   const handleClick = (probability) => {
     const { exn, y, exy } = Probability[probability][chaosFactor];

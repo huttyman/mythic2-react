@@ -26,7 +26,10 @@ const ExpectedScene = ({ chaosFactor }) => {
         Roll d10
       </button>
       {result && (
+        
         <p className="mt-4">
+
+          ChaosFactor: <span className="font-bold">{chaosFactor}</span> <br />
           Result: <span className="font-bold">{`(${diceRoll})`}{result}</span>
         </p>
       )}
