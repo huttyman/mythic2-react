@@ -12,11 +12,13 @@ import ChaosFactor from './ChaosFactor';
 
 function App() {
 
-  const [mainChaosFactor, setMainChaosFactor] = useState(0);
+  const [mainChaosFactor, setMainChaosFactor] = useState(5);
   
   return (
     <div className="App">
-      <ChaosFactor/>
+      <ChaosFactor
+        setMainChaosFactor={setMainChaosFactor}
+      />
       <MeaningTable/>
       <ExpectedScene chaosFactor={mainChaosFactor}/>
       <AdventureList/>

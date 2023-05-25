@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Probability } from './utils/Probability';
 
   
-const ChaosFactor = () => {
+const ChaosFactor = ({setMainChaosFactor}) => {
 
   const [chaosFactor, setChaosFactor] = useState(5);
   const [result, setResult] = useState('');
@@ -42,7 +42,12 @@ const ChaosFactor = () => {
           <select
             id="chaosFactor"
             value={chaosFactor}
-            onChange={(e) => setChaosFactor(e.target.value)}
+            onChange={
+                (e) =>{ 
+                    setChaosFactor(e.target.value)
+                    setMainChaosFactor(e.target.value)
+                }
+            }
             className="mt-1 block w-full rounded-md border border-gray-300 bg-white px-3 py-2 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
           >
             {Array.from({ length: 9 }, (_, i) => (
