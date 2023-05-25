@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useState } from 'react';
 import RandomSection from './RandomSection';
-import { sections } from "../utils/RamdomDetail";
+import { sections } from "../../utils/RamdomDetail";
 
   
 const ElementsTable = () => {

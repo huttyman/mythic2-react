@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useState } from 'react';
 import MeaningSection from './MeaningSection';
-import { sections } from "../utils/MeaningElementDetail";
+import { sections } from "../../utils/MeaningElementDetail";
 
   
 const MeaningTable = () => {

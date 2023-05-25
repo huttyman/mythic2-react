@@ -1,11 +1,12 @@
 import React from 'react';
 
 import { useState } from 'react';
-import ElementsTable from './ElementsTable';
-import MeaningTable from './MeaningTable';
+import ElementsTable from './ElementTable/ElementsTable';
+import MeaningTable from './MeaningTable/MeaningTable';
 import AdventureList from './AdventureList/AdventureList';
 import ExpectedScene from './ExpectedScene';
 import ChaosFactor from './ChaosFactor';
+import Note from './Note';
 
 
 const Tab1 = () => {
@@ -20,6 +21,7 @@ const Tab1 = () => {
       />
       <MeaningTable/>
       <ExpectedScene chaosFactor={mainChaosFactor}/>
+      <Note/>
       <AdventureList/>
       <ElementsTable/>
     </div>
