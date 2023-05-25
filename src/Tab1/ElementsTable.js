@@ -1,28 +1,29 @@
 import React from 'react';
 
 import { useState } from 'react';
-import MeaningSection from './MeaningSection';
-import { sections } from "./utils/MeaningElementDetail";
+import RandomSection from './RandomSection';
+import { sections } from "../utils/RamdomDetail";
 
   
-const MeaningTable = () => {
+const ElementsTable = () => {
 
   const [result, setResult] = useState([]);
+  const [detail, setDetail] = useState('');
   const [topic, setTopic] = useState('');
   const [detailVisible, setDetailVisible] = useState(false);
   return (
     <div className="my-8">
-      <h2 className="text-2xl font-bold mb-4">MEANING TABLE</h2>
+      <h2 className="text-2xl font-bold mb-4">ELEMENTS MEANING TABLES AT A GLANCE</h2>
       {/* Add the table contents here */}
 
       <div className="flex flex-wrap justify-center space-x-5">
             {sections.map((section, index) => (
-                <MeaningSection
+                <RandomSection
                     key={index}
                     buttonText={section.buttonText}
                     detailText={section.detailText}
-                    itemList1={section.itemList1}
-                    itemList2={section.itemList2}
+                    itemList={section.itemList}
+                    setDetail={setDetail}
                     setResult={setResult}
                     setTopic={setTopic}
                     setDetailVisible={setDetailVisible}
@@ -36,10 +37,14 @@ const MeaningTable = () => {
                 <p>{result[0]}</p>
                 <p>{result[1]}</p>
                 </div>
+            <h3 className="text-xl font-bold">Detail:</h3>
+                <p>
+                {detail}
+                </p>
             </div>
         )}
     </div>
   );
 }
 
-export default MeaningTable;
+export default ElementsTable;
